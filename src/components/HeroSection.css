@@ -1,36 +1,50 @@
 .hero {
-    display: grid;
-    /*grid-template-columns: 1fr 1fr;*/
-    align-items: center;
-    gap: 2rem;
-    padding: 4rem 2rem;
-    background-image: url('../assets/Jewel_Model.jpg'); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-    overflow: hidden;
+  padding: 4rem 2rem;
+  min-height: 90vh;
+  position: absolute;
+
+  background-image: url('../assets/BeautifulModel.webp'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  width: 100%;
   }
-  
+
+  /* dark overlay for readanbility */
+.hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+  z-index: 1;
+}
+
   .hero__content {
-    max-width: 500px;
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    color: #fff;
     animation: fadeInSlide 1s ease;
   }
   
   .hero__title {
     font-family: serif;
-    font-size: 2.5rem;
-    color: #6f584b; /* Muted bronze */
+    font-size: 3rem;
     margin-bottom: 1rem;
+    font-weight: 600;
   }
   
   .hero__subtitle {
     font-family: sans-serif;
-    font-size: 1.125rem;
-    color: #333;
+    font-size: 1.25rem;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   
   .hero__cta {
@@ -39,7 +53,7 @@
     background-color: #d4af37; /* Champagne gold */
     color: white;
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.75rem;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -64,9 +78,8 @@
   /* Mobile responsive layout */
   @media (max-width: 768px) {
     .hero {
-      grid-template-columns: 1fr;
-      padding: 2rem 1rem;
-      gap: 1.5rem;
+      height: 60vh;
+      padding: 3rem 1rem;
     }
   
     .hero__title {
