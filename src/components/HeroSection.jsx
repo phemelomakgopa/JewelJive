@@ -12,6 +12,7 @@ export default function HeroSection() {
         </p>
         <button className="hero__cta">Discover the Collection</button>
       </div>
+
     </section>
   );
 }
