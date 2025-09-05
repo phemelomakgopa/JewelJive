@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar__logo"> {/* Placeholder logo text */}
-        <span className="navbar__logo-text">JewelJive</span>
+        <a href="/" className="navbar__logo-text">JewelJive</a>
       </div>
 
       <div className={`navbar__links ${menuOpen && isMobile ? "open" : ""}`}>
