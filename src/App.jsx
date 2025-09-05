@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import ChatBot from "./components/chatBot"; // ✅ Import ChatBot component
-import ProductList from "./components/ProductList";
+//import ProductList from "./components/ProductList";
 import "./App.css";
 
 function App() {
@@ -14,7 +14,6 @@ function App() {
         {/* Additional content */}
       </main>
       <ChatBot /> {/* ✅ Chatbot appears bottom-right */}
-      <ProductList /> {/* ✅ Product list appears below main content */}
     </div>
   );
 }
